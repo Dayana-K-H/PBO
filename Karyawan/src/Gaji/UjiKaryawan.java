@@ -2,12 +2,13 @@ package Gaji;
 
 public class UjiKaryawan {
     public static void main(String[] args) {
-        KaryawanTetap karyawan1 = new KaryawanTetap(null, null, 0);
-        KaryawanKontrak karyawan2 = new KaryawanKontrak(null, null, 0);
-        KaryawanTetap karyawan3 = new KaryawanTetap(null, null, 0);
-
+        KaryawanTetap karyawan1 = new KaryawanTetap();
         karyawan1.input();
+
+        KaryawanKontrak karyawan2 = new KaryawanKontrak();
         karyawan2.input();
-        karyawan3.input();
+
+        KaryawanTetap karyawan3 = new KaryawanTetap("Cika", "019", 5);
+        karyawan3.tampilkanData();
     }
 }
