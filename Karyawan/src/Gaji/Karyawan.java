@@ -5,9 +5,6 @@ public class Karyawan {
     protected String nip;
     protected int gajiPokok;
 
-    public Karyawan(){
-    }
-    
     public Karyawan(String nama, String nip){
         this.nama = nama;
         this.nip = nip;
