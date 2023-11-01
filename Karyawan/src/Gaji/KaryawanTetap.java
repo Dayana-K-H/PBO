@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class KaryawanTetap extends Karyawan {
     private int jumlahAnak; 
 
+    public KaryawanTetap(){
+
+    }
+    
     public KaryawanTetap(String nama, String nip, int jumlahAnak){
         super(nama, nip);
         this.jumlahAnak = jumlahAnak;
@@ -36,19 +40,34 @@ public class KaryawanTetap extends Karyawan {
         }
         return gajiTotal;
     }
+
+    public void tampilkanData(){
+        System.out.println("---- Data Karyawan ----");
+        System.out.println("Nama  : " + this.nama);
+        System.out.println("Nip   : " + this.nip);
+        System.out.println("Gaji pokok  : " + getGajiPokok());
+        System.out.println("Tipe Karyawan   : " + getTipeKaryawan());
+        System.out.println("Jumlah Anak : " + this.jumlahAnak);
+        System.out.println("Gaji tambahan   : " + getGajiTambahan());
+        System.out.println("Total Gaji: " + hitungGajiTotal());
+        System.out.println();
+
+    }
     public void input() {
         Scanner inputScanner = new Scanner(System.in);
         
         System.out.println("---- Data Karyawan ----");
         System.out.print("Nama  : ");
-        nama = inputScanner.next();
+        this.nama = inputScanner.next();
         System.out.print("Nip   : ");
-        nip = inputScanner.next();
+        this.nip = inputScanner.next();
         System.out.println("Gaji pokok  : " + getGajiPokok());
         System.out.println("Tipe Karyawan   : " + getTipeKaryawan());
         System.out.print("Jumlah Anak : ");
-        jumlahAnak = inputScanner.nextInt();
+        this.jumlahAnak = inputScanner.nextInt();
         System.out.println("Gaji tambahan   : " + getGajiTambahan());
         System.out.println("Total Gaji: " + hitungGajiTotal());
+        System.out.println();
+
     }
 }
